@@ -1,0 +1,135 @@
+.App {
+  float: left;
+  text-align: center;
+  width: 100%;
+  min-height: 90vh;
+  padding: 5vh 0;
+}
+
+.App .form {
+  float: left;
+  padding: 0 30px;
+  width: 500px;
+  min-height: 150px;
+}
+
+.App .response {
+  float: left;
+  padding: 30px;
+  margin: 0 30px;
+  width: calc(100% - 680px);
+  min-height: calc(70vh - 60px);
+  background-color: #ffffff;
+  border-radius: 30px;
+  font-size: 20px;
+  text-align: left;
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  cursor: pointer;
+}
+
+.App .response:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@media screen and (max-width: 500px) {
+  .App .form {
+    float: none;
+    margin: 0 auto;
+    width: 90%;
+    padding: 0;
+  }
+
+  .App .response {
+    float: left;
+    margin: 15px 5%;
+    padding: 15px;
+    border-radius: 15px;
+    width: calc(90% - 30px);
+  }
+}
+
+.App .form h1 {
+  font-size: 50px;
+}
+
+.App .form h2 {
+  float: left;
+  margin: 5px 0;
+}
+
+.App .form input[type=text], .App .form pre {
+  padding: 0 10px;
+  width: calc(100% - 10px);
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #3b5360;
+  margin-bottom: 5px;
+  color: #3b5360;
+}
+
+.App .form input[type=text] {
+  height: 50px;
+}
+
+.App .form pre {
+  text-align: left;
+  padding: 10px 10px;
+  min-height: 40px;
+  margin-top: 5px;
+  background-color: #ffffff;
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  font-size: 20px;
+}
+
+.App .form button {
+  float: left;
+  width: 20%;
+	height: 40px;
+  background-color: #3b5360;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: bold;
+  outline: none;
+  margin: 15px 15px 0 0;
+}
+
+.App .form button:hover{
+  background-color: #648292;
+}
+
+.loader {
+  margin: calc(35vh - 30px - 60px) auto;
+  border: 16px solid #3b5360;
+  border-radius: 50%;
+  border-top: 16px solid #f3f3f3;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
