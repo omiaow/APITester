@@ -32,7 +32,9 @@ function App() {
       e.target.style.backgroundColor = "#ABEBC6"
       setTimeout(() => {
         e.target.style.backgroundColor = "#FFFFFF"
-        let newResponse = {...response}
+        let newResponse
+        if (typeof response === "string") newResponse = `${response}`
+        else newResponse = {...response}
         setResponse("Copied!")
         setTimeout(() => {
           setResponse(newResponse)
