@@ -36,6 +36,7 @@ function App() {
         if (typeof response === "string") newResponse = `${response}`
         else newResponse = {...response}
         setResponse("Copied!")
+        
         setTimeout(() => {
           setResponse(newResponse)
         }, 700);
